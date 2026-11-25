@@ -230,14 +230,23 @@ body { margin: 0; background: #fff; }
 .mdr-merit__item { display: flex; gap: 40px; padding: 36px 8px; border-bottom: 1px solid var(--mdr-line); }
 .mdr-merit__num { flex: 0 0 72px; font-family: var(--mdr-en); font-style: italic; font-size: 52px; line-height: 1; color: var(--mdr-blue); }
 .mdr-merit__ttl { margin-bottom: 8px; font-family: var(--mdr-serif); font-weight: 600; font-size: 22px; line-height: 1.6; letter-spacing: .08em; }
-.mdr-plastic { display: flex; align-items: center; gap: 40px; margin-top: 56px; padding: 44px 48px; background: #fff; border: 1px solid var(--mdr-blue-light); }
-.mdr-plastic__head { flex: 0 0 47%; }
-.mdr-plastic__label {
-  display: inline-block; margin-bottom: 12px; padding: 2px 16px; background: var(--mdr-blue); color: #fff;
-  font-size: 13px; line-height: 1.9; letter-spacing: .12em;
+
+/* ---------- 形成外科専門医の先生へ（常勤医師のみ） ---------- */
+.mdr-plastic { padding: 96px 24px 88px; background: linear-gradient(135deg, #2a4a86 0%, #436eba 100%); color: #fff; text-align: center; }
+.mdr-plastic__inner { position: relative; max-width: 920px; margin: 0 auto; padding: 64px 48px 56px; border: 1px solid rgba(255,255,255,.6); }
+.mdr-plastic__only {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); padding: 6px 32px; background: #fff;
+  color: var(--mdr-blue-deep); font-weight: 500; font-size: 15px; line-height: 1.7; letter-spacing: .18em; white-space: nowrap;
 }
-.mdr-plastic__ttl { font-family: var(--mdr-serif); font-weight: 500; font-size: 22px; line-height: 1.7; letter-spacing: .05em; }
-.mdr-plastic__txt { font-size: 15px; }
+.mdr-plastic__label {
+  display: inline-flex; align-items: center; gap: 18px; margin-bottom: 14px;
+  font-family: var(--mdr-serif); font-size: 20px; line-height: 1.6; letter-spacing: .2em;
+}
+.mdr-plastic__label::before, .mdr-plastic__label::after { content: ""; width: 40px; height: 1px; background: rgba(255,255,255,.75); }
+.mdr-plastic__ttl { margin-bottom: 28px; font-family: var(--mdr-serif); font-weight: 500; font-size: 34px; line-height: 1.7; letter-spacing: .1em; }
+.mdr-plastic__txt { max-width: 700px; margin: 0 auto; text-align: left; }
+.mdr-plastic__note { margin-top: 14px; font-size: 14px; line-height: 1.8; color: #dbe7f8; }
+.mdr-plastic__link { margin-top: 36px; }
 
 /* ---------- 04 TREATMENTS ---------- */
 .mdr-treat__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -283,11 +292,6 @@ body { margin: 0; background: #fff; }
   display: inline-block; margin-left: 10px; padding: 0 10px; background: var(--mdr-blue); color: #fff;
   font-size: 12px; line-height: 1.8; letter-spacing: .06em; vertical-align: 1px;
 }
-.mdr-incent { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 14px; }
-.mdr-incent__table { width: 100%; border-collapse: collapse; background: #fff; font-size: 14px; line-height: 1.7; }
-.mdr-incent__table caption { padding: 4px 8px; background: var(--mdr-blue); color: #fff; font-size: 14px; letter-spacing: .2em; caption-side: top; }
-.mdr-incent__table th, .mdr-incent__table td { padding: 7px 10px; border: 1px solid var(--mdr-line); text-align: center; font-weight: 400; }
-.mdr-incent__table th { background: var(--mdr-blue-pale); font-weight: 500; }
 .mdr-job__cta { margin-top: 40px; text-align: center; }
 
 /* ---------- 06 WANTED ---------- */
@@ -385,8 +389,6 @@ body { margin: 0; background: #fff; }
   .mdr-sec { padding: 80px 0; }
   .mdr-split { gap: 40px; }
   .mdr-four { grid-template-columns: 1fr 1fr; }
-  .mdr-plastic { display: block; padding: 36px 32px; }
-  .mdr-plastic__head { margin-bottom: 16px; }
 
   .mdr-fixcta {
     display: block; position: fixed; left: 0; bottom: 0; z-index: 90; width: 100%; padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
@@ -468,9 +470,15 @@ body { margin: 0; background: #fff; }
   .mdr-merit__item { display: block; padding: 26px 0; }
   .mdr-merit__num { display: block; margin-bottom: 8px; font-size: 38px; }
   .mdr-merit__ttl { font-size: 18px; letter-spacing: .04em; }
-  .mdr-plastic { margin-top: 40px; padding: 28px 22px; }
-  .mdr-plastic__ttl { font-size: 19px; }
-  .mdr-plastic__ttl br { display: none; }
+  .mdr-plastic { padding: 72px 20px 64px; }
+  .mdr-plastic__inner { padding: 48px 20px 40px; }
+  .mdr-plastic__only { padding: 5px 22px; font-size: 13.5px; }
+  .mdr-plastic__label { gap: 12px; font-size: 16px; letter-spacing: .12em; }
+  .mdr-plastic__label::before, .mdr-plastic__label::after { width: 20px; }
+  .mdr-plastic__ttl { margin-bottom: 20px; font-size: 22px; letter-spacing: .05em; }
+  .mdr-plastic__note { text-align: left; }
+  .mdr-plastic__link .mdr-btn { padding: 12px 46px 12px 16px; font-size: 15px; letter-spacing: .06em; }
+  .mdr-plastic__link .mdr-btn::after { right: 16px; }
 
   .mdr-treat__grid { grid-template-columns: 1fr; gap: 16px; }
   .mdr-treat__box { padding: 26px 22px 28px; }
@@ -487,7 +495,6 @@ body { margin: 0; background: #fff; }
   .mdr-dl__row { display: block; margin-top: 10px; }
   .mdr-dl__row dt { padding: 8px 16px; font-size: 14.5px; }
   .mdr-dl__row dd { padding: 14px 16px 16px; font-size: 14.5px; }
-  .mdr-incent { grid-template-columns: 1fr; gap: 12px; }
   .mdr-badge { margin-left: 6px; padding: 0 8px; font-size: 11px; }
   .mdr-job__cta { margin-top: 28px; }
 
@@ -556,7 +563,7 @@ body { margin: 0; background: #fff; }
   </picture>
   <div class="mdr-hero__body">
     <p class="mdr-hero__label">Doctor Recruit<span>医師募集</span></p>
-    <h1 class="mdr-hero__title">医学部では、<br class="mdr-sp">誰も教えてくれなかった。<br><span class="mdr-hero__em">医師として生き抜く力</span>を、ここで。</h1>
+    <h1 class="mdr-hero__title">医学部では、<br class="mdr-sp">学ぶことができなかった。<br><span class="mdr-hero__em">医師として生き抜く力</span>を、ここで。</h1>
     <a class="mdr-btn mdr-btn--ghost" href="#entry">見学を申し込む</a>
   </div>
 </section>
@@ -716,18 +723,23 @@ body { margin: 0; background: #fff; }
         <span class="mdr-merit__num">04</span>
         <div class="mdr-merit__body">
           <h3 class="mdr-merit__ttl">頑張りが、きちんと収入に返ってくる</h3>
-          <p>週3日で年収1,400万円から。企業年金制度（福祉はぐくみ企業年金基金）で将来への備えも。さらに今後は、クリニックの利益を医師に分配・還元する仕組みも検討しています。</p>
+          <p>週3日で年収1,400万円から。企業年金制度（福祉はぐくみ企業年金基金）で将来への備えも。</p>
         </div>
       </li>
     </ol>
 
-    <div class="mdr-plastic">
-      <div class="mdr-plastic__head">
-        <p class="mdr-plastic__label">形成外科専門医の先生へ</p>
-        <p class="mdr-plastic__ttl">皮膚科診療ができるまで、<br>当院がしっかりバックアップします。</p>
-      </div>
-      <p class="mdr-plastic__txt">皮膚科の経験がなくても大丈夫です。当院独自の資料を使い、外来で皮膚科診療を担えるようになるまで支援します。形成外科の技術に皮膚科の診療力が加われば、医師としての価値は大きく広がります。</p>
-    </div>
+  </div>
+</section>
+
+<!-- ============ 形成外科専門医の先生へ（常勤医師のみ） ============ -->
+<section class="mdr-plastic" id="plastic">
+  <div class="mdr-plastic__inner">
+    <p class="mdr-plastic__only">常勤医師のみ対象</p>
+    <p class="mdr-plastic__label">形成外科専門医の先生へ</p>
+    <h2 class="mdr-plastic__ttl">皮膚科診療ができるまで、<br>当院がしっかり<br class="mdr-sp">バックアップします。</h2>
+    <p class="mdr-plastic__txt">皮膚科の経験がなくても大丈夫です。当院独自の資料を使い、外来で皮膚科診療を担えるようになるまで支援します。形成外科の技術に皮膚科の診療力が加われば、医師としての価値は大きく広がります。</p>
+    <p class="mdr-plastic__note">※このサポートは、常勤医師としてご勤務いただく場合が対象です。</p>
+    <p class="mdr-plastic__link"><a class="mdr-btn mdr-btn--white" href="#req-fulltime">常勤医師の募集要項を見る</a></p>
   </div>
 </section>
 
@@ -779,6 +791,7 @@ body { margin: 0; background: #fff; }
           <li>アレルギー科</li>
           <li>形成外科</li>
           <li>ナローバンドUVB</li>
+          <li>エキシマレーザー</li>
           <li>予防接種</li>
         </ul>
       </div>
@@ -791,6 +804,7 @@ body { margin: 0; background: #fff; }
           <li>毛穴の開き・肌のキメ</li>
           <li>医療脱毛</li>
           <li>ピーリング</li>
+          <li>ボトックス注射</li>
           <li>注入治療</li>
         </ul>
       </div>
@@ -825,7 +839,7 @@ body { margin: 0; background: #fff; }
           <dd>
             <ul class="mdr-ul">
               <li>皮膚科専門医、もしくはそれに準ずる経験をお持ちの方</li>
-              <li>形成外科専門医で、皮膚科診療経験のある方</li>
+              <li>形成外科専門医の方</li>
             </ul>
             <p class="mdr-note">※後期研修医の方もご相談ください。</p>
           </dd>
@@ -926,7 +940,7 @@ body { margin: 0; background: #fff; }
           <dd>
             <ul class="mdr-ul">
               <li>皮膚科専門医、もしくはそれに準ずる経験をお持ちの方</li>
-              <li>形成外科専門医で、皮膚科診療経験のある方</li>
+              <li>形成外科専門医の方</li>
             </ul>
           </dd>
         </div>
@@ -964,36 +978,6 @@ body { margin: 0; background: #fff; }
             <p class="mdr-pay"><span class="mdr-pay__cond">午後</span><span class="mdr-pay__num"><b>7</b>万円</span></p>
             <p class="mdr-pay"><span class="mdr-pay__cond">終日</span><span class="mdr-pay__num"><b>13</b>万円〜</span></p>
             <p class="mdr-note">※時給2万円換算です。交通費は別途、実費を支給します。</p>
-          </dd>
-        </div>
-        <div class="mdr-dl__row">
-          <dt>インセンティブ</dt>
-          <dd>
-            <p>外来患者数に応じて、個別にインセンティブを支給します。診察人数が午前は66人、午後は81人を超えたところから、5人きざみで2,500円ずつ加算します。</p>
-            <div class="mdr-incent">
-              <table class="mdr-incent__table">
-                <caption>午前</caption>
-                <thead><tr><th scope="col">診察人数</th><th scope="col">金額</th></tr></thead>
-                <tbody>
-                  <tr><td>65人以下</td><td>60,000円</td></tr>
-                  <tr><td>66〜70人</td><td>62,500円</td></tr>
-                  <tr><td>71〜75人</td><td>65,000円</td></tr>
-                  <tr><td>76〜80人</td><td>67,500円</td></tr>
-                  <tr><td>81〜85人</td><td>70,000円</td></tr>
-                </tbody>
-              </table>
-              <table class="mdr-incent__table">
-                <caption>午後</caption>
-                <thead><tr><th scope="col">診察人数</th><th scope="col">金額</th></tr></thead>
-                <tbody>
-                  <tr><td>80人以下</td><td>70,000円</td></tr>
-                  <tr><td>81〜85人</td><td>72,500円</td></tr>
-                  <tr><td>86〜90人</td><td>75,000円</td></tr>
-                  <tr><td>91〜95人</td><td>77,500円</td></tr>
-                  <tr><td>96〜100人</td><td>80,000円</td></tr>
-                </tbody>
-              </table>
-            </div>
           </dd>
         </div>
         <div class="mdr-dl__row">
@@ -1136,7 +1120,7 @@ body { margin: 0; background: #fff; }
   if (!('IntersectionObserver' in window)) return;
   var targets = root.querySelectorAll(
     '.mdr-head, .mdr-split__photo, .mdr-split__text, .mdr-truth__text, .mdr-truth__key, .mdr-truth__note,' +
-    '.mdr-four__item, .mdr-compare, .mdr-merit__item, .mdr-plastic, .mdr-treat__box, .mdr-job,' +
+    '.mdr-four__item, .mdr-compare, .mdr-merit__item, .mdr-plastic__inner, .mdr-treat__box, .mdr-job,' +
     '.mdr-check li, .mdr-flow__item, .mdr-income__item'
   );
   root.classList.add('mdr-js');
