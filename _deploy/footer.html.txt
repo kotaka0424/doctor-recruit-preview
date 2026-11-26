@@ -1,0 +1,53 @@
+<script>
+(function () {
+  var root = document.querySelector('.mdr-page');
+  if (!root) return;
+  var header = document.getElementById('mdrHeader');
+  var nav = document.getElementById('mdrNav');
+  var toggle = document.getElementById('mdrToggle');
+
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  }
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setMenu(false);
+    });
+  }
+
+  function onScroll() {
+    if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (!('IntersectionObserver' in window)) return;
+  var targets = root.querySelectorAll(
+    '.mdr-head, .mdr-split__photo, .mdr-split__text, .mdr-truth__text, .mdr-truth__key, .mdr-truth__note,' +
+    '.mdr-four__item, .mdr-compare, .mdr-merit__item, .mdr-plastic__inner, .mdr-treat__box, .mdr-job,' +
+    '.mdr-check li, .mdr-flow__item, .mdr-income__item'
+  );
+  root.classList.add('mdr-js');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  targets.forEach(function (el) { el.classList.add('mdr-reveal'); io.observe(el); });
+  // Safety net: never leave content hidden
+  window.setTimeout(function () {
+    targets.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight) el.classList.add('is-in');
+    });
+  }, 1500);
+})();
+</script>

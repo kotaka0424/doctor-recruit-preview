@@ -1,0 +1,22 @@
+{
+  "content.html": {
+    "sha256": "370aba00c37d580ff1dbeb5dc37875f4657e2a25db8b2c6489ed87645c4cbe86",
+    "chars": 20717,
+    "bytes": 28721
+  },
+  "custom.css": {
+    "sha256": "21c14e4b27f655001b92f7cdeba058091252d8614d89148dac684589da733e7d",
+    "chars": 31247,
+    "bytes": 31247
+  },
+  "head.html": {
+    "sha256": "88300946e5e218e22a9c91c157f6a1b09423d210b6b993b4fd07d5f89aa4c9db",
+    "chars": 331,
+    "bytes": 331
+  },
+  "footer.html": {
+    "sha256": "e0c3cca6be3aef08daa6c861e0bb5474bc6845b41f988cdb3ff2a6bc04e076eb",
+    "chars": 2002,
+    "bytes": 2032
+  }
+}
