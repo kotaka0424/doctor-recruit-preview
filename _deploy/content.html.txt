@@ -2,7 +2,7 @@
 <div class="mdr-page" id="top">
 <header class="mdr-header" id="mdrHeader">
   <a class="mdr-header__logo" href="#top">
-    <img src="https://ebinahifu-recruit.com/wp-content/uploads/2026/11/mdr-logo.png" alt="海老名皮フ科クリニック" width="816" height="112">
+    <img src="https://ebinahifu-recruit.com/wp-content/uploads/2026/11/mdr-logo.png" alt="海老名皮フ科クリニック" width="816" height="112" loading="eager">
     <span class="mdr-header__sub">医師採用サイト</span>
   </a>
   <nav class="mdr-nav" id="mdrNav" aria-label="ページ内メニュー">
@@ -28,7 +28,7 @@
 <section class="mdr-hero">
   <picture class="mdr-hero__media">
     <source media="(max-width: 767px)" srcset="https://ebinahifu-recruit.com/wp-content/uploads/2026/11/mdr-hero-sp.webp">
-    <img src="https://ebinahifu-recruit.com/wp-content/uploads/2026/11/mdr-hero.webp" alt="海老名皮フ科クリニックの医師" width="2000" height="1334">
+    <img src="https://ebinahifu-recruit.com/wp-content/uploads/2026/11/mdr-hero.webp" alt="海老名皮フ科クリニックの医師" width="2000" height="1334" loading="eager" fetchpriority="high">
   </picture>
   <div class="mdr-hero__body">
     <p class="mdr-hero__label">Doctor Recruit<span>医師募集</span></p>

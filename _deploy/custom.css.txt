@@ -1,4 +1,6 @@
 /* ==== mdr-page (doctor recruit renewal 2026-11) START ==== */
+#container .mdr-page :where(h1, h2, h3, p, ul, ol, dl, li, dt, dd, figure, figcaption, a) { line-height: inherit; clear: none; overflow-wrap: inherit; }
+#container .mdr-page :where(ul, ol) { margin-left: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 body { margin: 0; background: #fff; }
 
@@ -476,9 +478,8 @@ body { margin: 0; background: #fff; }
   #container .mdr-footer__name { font-size: 18px; }
   #container .mdr-footer__copy { margin-top: 36px; }
 }
-#container #page_content { width: auto; max-width: none; margin: 0; padding: 0; }
-#container .mdr-page :where(h1, h2, h3, p, ul, ol, dl, li, dt, dd, figure, figcaption) { line-height: inherit; clear: none; overflow-wrap: inherit; }
-#container .mdr-page :where(ul, ol) { margin-left: 0; }
+#container #page_header_type2 { display: none; }
+#container #page_content { width: auto; max-width: none; margin: 0; padding: 0; animation: none; transform: none; opacity: 1; }
 #container .mdr-page h1, #container .mdr-page h2, #container .mdr-page h3 { margin-top: 0 !important; }
 #container .mdr-page h3.mdr-four__ttl { margin-top: 6px !important; }
 #container .mdr-page h2.mdr-entry__ttl { margin-top: 4px !important; }
