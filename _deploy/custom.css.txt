@@ -479,6 +479,7 @@ body { margin: 0; background: #fff; }
   #container .mdr-footer__copy { margin-top: 36px; }
 }
 #container #page_header_type2 { display: none; }
+body #dp-footer-bar, body #return_top { display: none !important; }
 #container #page_content { width: auto; max-width: none; margin: 0; padding: 0; animation: none; transform: none; opacity: 1; }
 #container .mdr-page h1, #container .mdr-page h2, #container .mdr-page h3 { margin-top: 0 !important; }
 #container .mdr-page h3.mdr-four__ttl { margin-top: 6px !important; }
